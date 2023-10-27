@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "charconv": "cpp",
+        "tuple": "cpp",
+        "limits": "cpp",
+        "cmath": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp"
+    }
+}

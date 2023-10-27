@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{BB3822BC-3693-4F09-9607-B079E2820870}</ProjectGuid>
+    <RootNamespace>libcuraengine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <ProjectName>libsliceengine</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\src;D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine;D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\protobuf\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\protobuf\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>..\curaengine\src;..\curaengine;..\curaengine\src\clipper;..\curaengine\includeForMSVC;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\src;D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine;D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\protobuf_d\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\visual studio 2017\Projects\curaengine\CuraEngine_VS2017\curaengine\protobuf_d\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>..\curaengine\src;..\curaengine;..\curaengine\src\clipper;..\curaengine\includeForMSVC;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <TargetName>$(ProjectName)d</TargetName>
+    <IntDir>build\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;__WIN32;NOMINMAX;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;VERSION="3.3.1";SLICE_ENGINE_EXPORTS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\external\osg\include\;dll_src;src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)../external/osg/lib/</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;__WIN32;_WIN64;NOMINMAX;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;VERSION="3.3.1";SLICE_ENGINE_EXPORTS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>dll_src;src;$(SolutionDir)include;$(SolutionDir)..\external\boost\include\boost-1_79\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)\libsliceengined.lib ..\..\Slicer\Slicer\lib 
+copy $(OutDir)\libsliceengined.dll ..\..\Slicer\debug
+copy dll_src\libsliceengine.h ..\..\Slicer\Slicer\lib
+copy $(SolutionDir)include\slice_engine_common.h ..\..\Slicer\Slicer\lib </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;__WIN32;NOMINMAX;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;VERSION="3.3.1";SLICE_ENGINE_EXPORTS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\external\osg\include\;dll_src;src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>$(SolutionDir)../external/osg/lib/</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;__WIN32;_WIN64;NOMINMAX;_WINSOCK_DEPRECATED_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;VERSION="3.3.1";SLICE_ENGINE_EXPORTS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>dll_src;src;$(SolutionDir)include;$(SolutionDir)..\external\boost\include\boost-1_79\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(OutDir)\libsliceengine.lib ..\..\Slicer\Slicer\lib 
+copy $(OutDir)\libsliceengine.dll ..\..\Slicer\bin
+copy dll_src\libsliceengine.h ..\..\Slicer\Slicer\lib 
+copy $(SolutionDir)include\slice_engine_common.h ..\..\Slicer\Slicer\lib </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dll_src\CuraMeshCollector.cpp" />
+    <ClCompile Include="dll_src\dllmain.cpp" />
+    <ClCompile Include="dll_src\libsliceengine.cpp" />
+    <ClCompile Include="src\BeadingStrategy\BeadingStrategy.cpp" />
+    <ClCompile Include="src\BeadingStrategy\BeadingStrategyFactory.cpp" />
+    <ClCompile Include="src\BeadingStrategy\DistributedBeadingStrategy.cpp" />
+    <ClCompile Include="src\BeadingStrategy\LimitedBeadingStrategy.cpp" />
+    <ClCompile Include="src\BeadingStrategy\OuterWallInsetBeadingStrategy.cpp" />
+    <ClCompile Include="src\BeadingStrategy\RedistributeBeadingStrategy.cpp" />
+    <ClCompile Include="src\BeadingStrategy\WideningBeadingStrategy.cpp" />
+    <ClCompile Include="src\bridge.cpp" />
+    <ClCompile Include="src\clipper\clipper.cpp" />
+    <ClCompile Include="src\commandSocket.cpp" />
+    <ClCompile Include="src\ConicalOverhang.cpp" />
+    <ClCompile Include="src\ExtruderTrain.cpp" />
+    <ClCompile Include="src\FffGcodeWriter.cpp" />
+    <ClCompile Include="src\FffPolygonGenerator.cpp" />
+    <ClCompile Include="src\FffProcessor.cpp" />
+    <ClCompile Include="src\gcodeExport.cpp" />
+    <ClCompile Include="src\GCodePathConfig.cpp" />
+    <ClCompile Include="src\infill.cpp" />
+    <ClCompile Include="src\infill\GyroidInfill.cpp" />
+    <ClCompile Include="src\infill\ImageBasedDensityProvider.cpp" />
+    <ClCompile Include="src\infill\NoZigZagConnectorProcessor.cpp" />
+    <ClCompile Include="src\infill\SierpinskiFill.cpp" />
+    <ClCompile Include="src\infill\SierpinskiFillProvider.cpp" />
+    <ClCompile Include="src\infill\SpaceFillingTreeFill.cpp" />
+    <ClCompile Include="src\infill\SpaghettiInfill.cpp" />
+    <ClCompile Include="src\infill\SpaghettiInfillPathGenerator.cpp" />
+    <ClCompile Include="src\infill\SubDivCube.cpp" />
+    <ClCompile Include="src\infill\ZigzagConnectorProcessor.cpp" />
+    <ClCompile Include="src\InsetOrderOptimizer.cpp" />
+    <ClCompile Include="src\InterLacedPrimeTower.cpp" />
+    <ClCompile Include="src\layerPart.cpp" />
+    <ClCompile Include="src\LayerPlan.cpp" />
+    <ClCompile Include="src\LayerPlanBuffer.cpp" />
+    <ClCompile Include="src\MergeInfillLines.cpp" />
+    <ClCompile Include="src\mesh.cpp" />
+    <ClCompile Include="src\MeshGroup.cpp" />
+    <ClCompile Include="src\Mold.cpp" />
+    <ClCompile Include="src\multiVolumes.cpp" />
+    <ClCompile Include="src\pathOrderOptimizer.cpp" />
+    <ClCompile Include="src\PathOrderPath.cpp" />
+    <ClCompile Include="src\pathPlanning\Comb.cpp" />
+    <ClCompile Include="src\pathPlanning\GCodePath.cpp" />
+    <ClCompile Include="src\pathPlanning\LinePolygonsCrossings.cpp" />
+    <ClCompile Include="src\pathPlanning\NozzleTempInsert.cpp" />
+    <ClCompile Include="src\pathPlanning\TimeMaterialEstimates.cpp" />
+    <ClCompile Include="src\Preheat.cpp" />
+    <ClCompile Include="src\PrimeTower.cpp" />
+    <ClCompile Include="src\progress\Progress.cpp" />
+    <ClCompile Include="src\progress\ProgressStageEstimator.cpp" />
+    <ClCompile Include="src\raft.cpp" />
+    <ClCompile Include="src\settings\AdaptiveLayerHeights.cpp" />
+    <ClCompile Include="src\settings\PathConfigStorage.cpp" />
+    <ClCompile Include="src\settings\SettingConfig.cpp" />
+    <ClCompile Include="src\settings\SettingContainer.cpp" />
+    <ClCompile Include="src\settings\SettingRegistry.cpp" />
+    <ClCompile Include="src\settings\settings.cpp" />
+    <ClCompile Include="src\settings\ZSeamConfig.cpp" />
+    <ClCompile Include="src\SkeletalTrapezoidation.cpp" />
+    <ClCompile Include="src\SkeletalTrapezoidationGraph.cpp" />
+    <ClCompile Include="src\skin.cpp" />
+    <ClCompile Include="src\SkirtBrim.cpp" />
+    <ClCompile Include="src\sliceDataStorage.cpp" />
+    <ClCompile Include="src\slicer.cpp" />
+    <ClCompile Include="src\support.cpp" />
+    <ClCompile Include="src\SupportInfillPart.cpp" />
+    <ClCompile Include="src\timeEstimate.cpp" />
+    <ClCompile Include="src\TopSurface.cpp" />
+    <ClCompile Include="src\TreeModelVolumes.cpp" />
+    <ClCompile Include="src\TreeSupport.cpp" />
+    <ClCompile Include="src\utils\AABB.cpp" />
+    <ClCompile Include="src\utils\AABB3D.cpp" />
+    <ClCompile Include="src\utils\Date.cpp" />
+    <ClCompile Include="src\utils\ExtrusionJunction.cpp" />
+    <ClCompile Include="src\utils\ExtrusionLine.cpp" />
+    <ClCompile Include="src\utils\ExtrusionSegment.cpp" />
+    <ClCompile Include="src\utils\gettime.cpp" />
+    <ClCompile Include="src\utils\LinearAlg2D.cpp" />
+    <ClCompile Include="src\utils\ListPolyIt.cpp" />
+    <ClCompile Include="src\utils\logoutput.cpp" />
+    <ClCompile Include="src\utils\MinimumSpanningTree.cpp" />
+    <ClCompile Include="src\utils\Point3.cpp" />
+    <ClCompile Include="src\utils\polygon.cpp" />
+    <ClCompile Include="src\utils\PolygonConnector.cpp" />
+    <ClCompile Include="src\utils\PolygonProximityLinker.cpp" />
+    <ClCompile Include="src\utils\PolygonsPointIndex.cpp" />
+    <ClCompile Include="src\utils\PolygonsSegmentIndex.cpp" />
+    <ClCompile Include="src\utils\polygonUtils.cpp" />
+    <ClCompile Include="src\utils\PolylineStitcher.cpp" />
+    <ClCompile Include="src\utils\ProximityPointLink.cpp" />
+    <ClCompile Include="src\utils\Simplify.cpp" />
+    <ClCompile Include="src\utils\socket.cpp" />
+    <ClCompile Include="src\utils\SpaceFillingTree.cpp" />
+    <ClCompile Include="src\utils\SquareGrid.cpp" />
+    <ClCompile Include="src\utils\SVG.cpp" />
+    <ClCompile Include="src\utils\VoronoiUtils.cpp" />
+    <ClCompile Include="src\WallsComputation.cpp" />
+    <ClCompile Include="src\WallToolPaths.cpp" />
+    <ClCompile Include="src\Weaver.cpp" />
+    <ClCompile Include="src\Wireframe2gcode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dll_src\CuraMeshCollector.h" />
+    <ClInclude Include="dll_src\libsliceengine.h" />
+    <ClInclude Include="src\BeadingStrategy\BeadingStrategy.h" />
+    <ClInclude Include="src\BeadingStrategy\BeadingStrategyFactory.h" />
+    <ClInclude Include="src\BeadingStrategy\DistributedBeadingStrategy.h" />
+    <ClInclude Include="src\BeadingStrategy\LimitedBeadingStrategy.h" />
+    <ClInclude Include="src\BeadingStrategy\OuterWallInsetBeadingStrategy.h" />
+    <ClInclude Include="src\BeadingStrategy\RedistributeBeadingStrategy.h" />
+    <ClInclude Include="src\BeadingStrategy\WideningBeadingStrategy.h" />
+    <ClInclude Include="src\BoostInterface.hpp" />
+    <ClInclude Include="src\bridge.h" />
+    <ClInclude Include="src\clipper\clipper.hpp" />
+    <ClInclude Include="src\commandSocket.h" />
+    <ClInclude Include="src\ConicalOverhang.h" />
+    <ClInclude Include="src\ExtruderTrain.h" />
+    <ClInclude Include="src\FanSpeedLayerTime.h" />
+    <ClInclude Include="src\FffGcodeWriter.h" />
+    <ClInclude Include="src\FffPolygonGenerator.h" />
+    <ClInclude Include="src\FffProcessor.h" />
+    <ClInclude Include="src\FlowTempGraph.h" />
+    <ClInclude Include="src\gcodeExport.h" />
+    <ClInclude Include="src\GcodeLayerThreader.h" />
+    <ClInclude Include="src\GCodePathConfig.h" />
+    <ClInclude Include="src\infill.h" />
+    <ClInclude Include="src\infill\DensityProvider.h" />
+    <ClInclude Include="src\infill\GyroidInfill.h" />
+    <ClInclude Include="src\infill\ImageBasedDensityProvider.h" />
+    <ClInclude Include="src\infill\NoZigZagConnectorProcessor.h" />
+    <ClInclude Include="src\infill\SierpinskiFill.h" />
+    <ClInclude Include="src\infill\SierpinskiFillProvider.h" />
+    <ClInclude Include="src\infill\SpaceFillingTreeFill.h" />
+    <ClInclude Include="src\infill\SpaghettiInfill.h" />
+    <ClInclude Include="src\infill\SpaghettiInfillPathGenerator.h" />
+    <ClInclude Include="src\infill\SubDivCube.h" />
+    <ClInclude Include="src\infill\UniformDensityProvider.h" />
+    <ClInclude Include="src\infill\ZigzagConnectorProcessor.h" />
+    <ClInclude Include="src\InsetOrderOptimizer.h" />
+    <ClInclude Include="src\InterLacedPrimeTower.h" />
+    <ClInclude Include="src\layerPart.h" />
+    <ClInclude Include="src\LayerPlan.h" />
+    <ClInclude Include="src\LayerPlanBuffer.h" />
+    <ClInclude Include="src\MergeInfillLines.h" />
+    <ClInclude Include="src\mesh.h" />
+    <ClInclude Include="src\MeshGroup.h" />
+    <ClInclude Include="src\Mold.h" />
+    <ClInclude Include="src\multiVolumes.h" />
+    <ClInclude Include="src\PathOrder.h" />
+    <ClInclude Include="src\PathOrderMonotonic.h" />
+    <ClInclude Include="src\pathOrderOptimizer.h" />
+    <ClInclude Include="src\PathOrderPath.h" />
+    <ClInclude Include="src\pathPlanning\Comb.h" />
+    <ClInclude Include="src\pathPlanning\CombPath.h" />
+    <ClInclude Include="src\pathPlanning\CombPaths.h" />
+    <ClInclude Include="src\pathPlanning\GCodePath.h" />
+    <ClInclude Include="src\pathPlanning\LinePolygonsCrossings.h" />
+    <ClInclude Include="src\pathPlanning\NozzleTempInsert.h" />
+    <ClInclude Include="src\pathPlanning\TimeMaterialEstimates.h" />
+    <ClInclude Include="src\Preheat.h" />
+    <ClInclude Include="src\PrimeTower.h" />
+    <ClInclude Include="src\PrintFeature.h" />
+    <ClInclude Include="src\progress\Progress.h" />
+    <ClInclude Include="src\progress\ProgressEstimator.h" />
+    <ClInclude Include="src\progress\ProgressEstimatorLinear.h" />
+    <ClInclude Include="src\progress\ProgressStageEstimator.h" />
+    <ClInclude Include="src\raft.h" />
+    <ClInclude Include="src\RetractionConfig.h" />
+    <ClInclude Include="src\settings\AdaptiveLayerHeights.h" />
+    <ClInclude Include="src\settings\EnumSettings.h" />
+    <ClInclude Include="src\settings\PathConfigStorage.h" />
+    <ClInclude Include="src\settings\SettingConfig.h" />
+    <ClInclude Include="src\settings\SettingContainer.h" />
+    <ClInclude Include="src\settings\SettingRegistry.h" />
+    <ClInclude Include="src\settings\settings.h" />
+    <ClInclude Include="src\settings\SettingsToGV.h" />
+    <ClInclude Include="src\settings\types\Angle.h" />
+    <ClInclude Include="src\settings\types\Duration.h" />
+    <ClInclude Include="src\settings\types\LayerIndex.h" />
+    <ClInclude Include="src\settings\types\Ratio.h" />
+    <ClInclude Include="src\settings\types\Temperature.h" />
+    <ClInclude Include="src\settings\types\Velocity.h" />
+    <ClInclude Include="src\settings\ZSeamConfig.h" />
+    <ClInclude Include="src\SkeletalTrapezoidation.h" />
+    <ClInclude Include="src\SkeletalTrapezoidationEdge.h" />
+    <ClInclude Include="src\SkeletalTrapezoidationGraph.h" />
+    <ClInclude Include="src\SkeletalTrapezoidationJoint.h" />
+    <ClInclude Include="src\skin.h" />
+    <ClInclude Include="src\SkirtBrim.h" />
+    <ClInclude Include="src\sliceDataStorage.h" />
+    <ClInclude Include="src\slicer.h" />
+    <ClInclude Include="src\SpaceFillType.h" />
+    <ClInclude Include="src\support.h" />
+    <ClInclude Include="src\SupportInfillPart.h" />
+    <ClInclude Include="src\timeEstimate.h" />
+    <ClInclude Include="src\TopSurface.h" />
+    <ClInclude Include="src\TreeModelVolumes.h" />
+    <ClInclude Include="src\TreeSupport.h" />
+    <ClInclude Include="src\utils\AABB.h" />
+    <ClInclude Include="src\utils\AABB3D.h" />
+    <ClInclude Include="src\utils\algorithm.h" />
+    <ClInclude Include="src\utils\Coord_t.h" />
+    <ClInclude Include="src\utils\Date.h" />
+    <ClInclude Include="src\utils\ExtrusionJunction.h" />
+    <ClInclude Include="src\utils\ExtrusionLine.h" />
+    <ClInclude Include="src\utils\ExtrusionSegment.h" />
+    <ClInclude Include="src\utils\floatpoint.h" />
+    <ClInclude Include="src\utils\gettime.h" />
+    <ClInclude Include="src\utils\HalfEdge.h" />
+    <ClInclude Include="src\utils\HalfEdgeGraph.h" />
+    <ClInclude Include="src\utils\HalfEdgeNode.h" />
+    <ClInclude Include="src\utils\intpoint.h" />
+    <ClInclude Include="src\utils\LazyInitialization.h" />
+    <ClInclude Include="src\utils\linearAlg2D.h" />
+    <ClInclude Include="src\utils\ListPolyIt.h" />
+    <ClInclude Include="src\utils\Lock.h" />
+    <ClInclude Include="src\utils\logoutput.h" />
+    <ClInclude Include="src\utils\macros.h" />
+    <ClInclude Include="src\utils\math.h" />
+    <ClInclude Include="src\utils\MinimumSpanningTree.h" />
+    <ClInclude Include="src\utils\NoCopy.h" />
+    <ClInclude Include="src\utils\optional.h" />
+    <ClInclude Include="src\utils\orderOptimizer.h" />
+    <ClInclude Include="src\utils\Point3.h" />
+    <ClInclude Include="src\utils\polygon.h" />
+    <ClInclude Include="src\utils\PolygonConnector.h" />
+    <ClInclude Include="src\utils\PolygonProximityLinker.h" />
+    <ClInclude Include="src\utils\PolygonsPointIndex.h" />
+    <ClInclude Include="src\utils\PolygonsSegmentIndex.h" />
+    <ClInclude Include="src\utils\polygonUtils.h" />
+    <ClInclude Include="src\utils\PolylineStitcher.h" />
+    <ClInclude Include="src\utils\ProximityPointLink.h" />
+    <ClInclude Include="src\utils\Simplify.h" />
+    <ClInclude Include="src\utils\socket.h" />
+    <ClInclude Include="src\utils\SpaceFillingTree.h" />
+    <ClInclude Include="src\utils\SparseGrid.h" />
+    <ClInclude Include="src\utils\SparseLineGrid.h" />
+    <ClInclude Include="src\utils\SparsePointGrid.h" />
+    <ClInclude Include="src\utils\SparsePointGridInclusive.h" />
+    <ClInclude Include="src\utils\SquareGrid.h" />
+    <ClInclude Include="src\utils\stdtostring.h" />
+    <ClInclude Include="src\utils\string.h" />
+    <ClInclude Include="src\utils\SVG.h" />
+    <ClInclude Include="src\utils\SymmetricPair.h" />
+    <ClInclude Include="src\utils\UnionFind.h" />
+    <ClInclude Include="src\utils\VoronoiUtils.h" />
+    <ClInclude Include="src\WallsComputation.h" />
+    <ClInclude Include="src\WallToolPaths.h" />
+    <ClInclude Include="src\weaveDataStorage.h" />
+    <ClInclude Include="src\Weaver.h" />
+    <ClInclude Include="src\Wireframe2gcode.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Cura.proto" />
+    <None Include="src\SkeletalTrapezoidationGraph.h.bak" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
